@@ -9,14 +9,14 @@ Usage
 
 - Include file:
 
-  <blockquote>
+
     #include "AmazonIAP.h"
-  </blockquote>
+
 
 
 - First of all you should create the Callback functions:
 
-  <blockquote>
+
     int32 AmazonIAPPurchaseSuccessfulCallback(void* system, void* user){
       char* productID = (char*) system;
       DoSomethingPurchseComplete(productSKU);
@@ -30,7 +30,6 @@ Usage
       delete productID;
       return 0;
     }
-  </blockquote>
 
 - Then you need to register them when you init your app:
 
