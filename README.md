@@ -9,13 +9,14 @@ Usage
 
 - Include file:
 
-    <blockquote>
+  <blockquote>
     #include "AmazonIAP.h"
-    </blockquote>
+  </blockquote>
 
 
 - First of all you should create the Callback functions:
 
+  <blockquote>
     int32 AmazonIAPPurchaseSuccessfulCallback(void* system, void* user){
       char* productID = (char*) system;
       DoSomethingPurchseComplete(productSKU);
@@ -29,22 +30,24 @@ Usage
       delete productID;
       return 0;
     }
-
+  </blockquote>
 
 - Then you need to register them when you init your app:
 
+  <blockquote>
     if (AmazonIAPAvailable()) {
       AmazonIAPRegister(AMAZONIAP_PURCHASE_SUCCESSFUL, &AmazonIAPPurchaseSuccessfulCallback, NULL);
       AmazonIAPRegister(AMAZONIAP_PURCHASE_FAILED, &AmazonIAPPurchaseFailedCallback, NULL);
     }
-
+  </blockquote>
 
 - Now you can just call the method to start a purchase process:
 
+  <blockquote>
     if (AmazonIAPAvailable()) {
       AmazonIAPStartPurchase(productSKU);
     }
-
+  </blockquote>
 
 - If the use completes the purchase or if the you already had bought it before, the AMAZONIAP_PURCHASE_SUCCESSFUL callback will be called with the productSKU that initiaded the request. Otherwise, the AMAZONIAP_PURCHASE_FAILED callback will be called with the productSKU also.
 
