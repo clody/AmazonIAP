@@ -46,5 +46,5 @@ Usage
   }
 ```
 
-- If the user completes the purchase or if the you already had bought it before, the AMAZONIAP_PURCHASE_SUCCESSFUL callback will be called with the productSKU that initiaded the request. Otherwise, the AMAZONIAP_PURCHASE_FAILED callback will be called with the productSKU also.
+- If the user completes the purchase or if he already had bought it before, the AMAZONIAP_PURCHASE_SUCCESSFUL callback will be called with the productSKU that initiaded the request. Otherwise, the AMAZONIAP_PURCHASE_FAILED callback will be called with the productSKU also.
 
