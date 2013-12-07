@@ -9,8 +9,9 @@ Usage
 
 - Include file:
 
+    <blockquote>
     #include "AmazonIAP.h"
-
+    </blockquote>
 
 
 - First of all you should create the Callback functions:
