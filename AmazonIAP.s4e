@@ -1,0 +1,14 @@
+callbacks
+include:
+#include <s3eTypes.h>
+
+// Callbacks available for registering
+enum AmazonIAPCallback
+{
+  AMAZONIAP_PURCHASE_SUCCESSFUL,
+  AMAZONIAP_PURCHASE_FAILED,
+  AMAZONIAP_CALLBACK_MAX
+};
+
+functions:
+s3eResult AmazonIAPStartPurchase(const char* productID) S3E_RESULT_ERROR run_on_os_thread
